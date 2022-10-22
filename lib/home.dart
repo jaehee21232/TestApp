@@ -1,23 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:testapp/page/HelloWorld.dart';
-import 'package:testapp/page/center.dart';
-import 'package:testapp/page/BottomNav.dart';
-import 'package:testapp/page/RowWidget.dart';
+import 'package:testapp/page/onboarding.dart';
 
 class HomeBuilder extends StatelessWidget {
   HomeBuilder({super.key});
-  final List<Widget> pages = <Widget>[
-    HelloWorld(),
-    CenterWidget(),
-    BottomNavi(),
-    RowWidget()
-  ];
-  final List<String> Texts = <String>[
-    "HelloWorld",
-    "Center",
-    "BottomAppBar",
-    "Row"
-  ];
+  final List<Widget> pages = <Widget>[OnBoardingPage()];
+  final List<String> Texts = <String>["OnBoardingPage"];
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
