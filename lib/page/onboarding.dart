@@ -36,6 +36,11 @@ class OnBoardingPage extends StatelessWidget {
       next: const Icon(Icons.arrow_forward),
       showSkipButton: true, //스킵버튼
       skip: const Text("Skip"),
+      dotsDecorator: DotsDecorator(
+        color: Colors.cyan,
+        size: Size(10, 10),
+        activeSize: Size(22, 10),
+      ),
     );
   }
 
