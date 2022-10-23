@@ -63,7 +63,7 @@ class _ListViewPageState extends State<ListViewPage> {
                   child: Image.asset(
                     image,
                     width: 200,
-                    height: 200,
+                    height: 180,
                   ),
                 ),
                 const SizedBox(
@@ -84,6 +84,13 @@ class _ListViewPageState extends State<ListViewPage> {
                     style: TextStyle(fontSize: 15, color: Colors.grey[500]),
                     textAlign: TextAlign.center,
                   ),
+                ),
+                ElevatedButton.icon(
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  icon: const Icon(Icons.close),
+                  label: const Text("close"),
                 )
               ]),
             ),
