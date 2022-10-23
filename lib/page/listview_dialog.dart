@@ -56,6 +56,36 @@ class _ListViewPageState extends State<ListViewPage> {
               height: 380,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10), color: Colors.white),
+              child: Column(children: [
+                ClipRRect(
+                  //사진 사각형
+                  borderRadius: BorderRadius.circular(10),
+                  child: Image.asset(
+                    image,
+                    width: 200,
+                    height: 200,
+                  ),
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                Text(
+                  title,
+                  style: const TextStyle(
+                      fontSize: 25,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.grey),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8),
+                  child: Text(
+                    description,
+                    maxLines: 3,
+                    style: TextStyle(fontSize: 15, color: Colors.grey[500]),
+                    textAlign: TextAlign.center,
+                  ),
+                )
+              ]),
             ),
           );
         });
