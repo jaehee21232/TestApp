@@ -9,38 +9,44 @@ class OnBoardingPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return IntroductionScreen(
       pages: [
+        //PageViewModel로 해도 되고 Widget 만들어서 해도 될듯?
         PageViewModel(
           title: "Title!",
           body: "This is body!\n" "first page!!",
-          image: Image.asset('images/page1.png'),
+          image: Image.asset('images/onboarding/page1.png'),
           decoration: getPageDecoration(),
         ),
         PageViewModel(
           title: "Title!",
           body: "This is body!\n" "second page!!",
-          image: Image.asset('images/page2.png'),
+          image: Image.asset('images/onboarding/page2.png'),
           decoration: getPageDecoration(),
         ),
         PageViewModel(
           title: "Title!",
           body: "This is body!\n" "third page!!",
-          image: Image.asset('images/page3.png'),
+          image: Image.asset('images/onboarding/page3.png'),
           decoration: getPageDecoration(),
         ),
       ],
       done: const Text("done"),
       onDone: () {
-        Navigator.of(context)
-            .push(MaterialPageRoute(builder: ((context) => const MyApp())));
-      }, //done을 누르면 실행되는거
-      next: const Icon(Icons.arrow_forward),
-      showSkipButton: true, //스킵버튼
-      skip: const Text("Skip"),
+        Navigator.of(context).pushReplacement(
+            MaterialPageRoute(builder: ((context) => const MyApp())));
+      }, //done을 누르면 실행되는거(마지막 페이지에서 나옴)
+      next: const Icon(Icons.arrow_forward), //Next 버튼 아이콘으로 됨
+      showSkipButton: true, //스킵버튼 True로 활성화
+      skip: const Text("Skip"), //스킵버튼 문구 지정
       dotsDecorator: DotsDecorator(
         color: Colors.cyan,
-        size: Size(10, 10),
-        activeSize: Size(22, 10),
+        size: Size(10, 10), //점 사이즈
+        activeSize: Size(22, 10), //현재 활성화된 점 사이즈
+        activeShape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(24),
+        ),
+        activeColor: Colors.red, //밑에 활성화된 점 색상
       ),
+      curve: Curves.bounceOut, //페이지 넘김 효과
     );
   }
 
