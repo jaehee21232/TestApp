@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 
 import '../model/listviewdata_model.dart';
 
-class listviewdataandpage extends StatefulWidget {
-  const listviewdataandpage({Key? key}) : super(key: key);
+class ListView_DataMove extends StatefulWidget {
+  const ListView_DataMove({super.key});
 
   @override
-  State<listviewdataandpage> createState() => _listviewdataandpageState();
+  State<ListView_DataMove> createState() => _ListView_DataMoveState();
 }
 
-class _listviewdataandpageState extends State<listviewdataandpage> {
-  static List<String> animalName = [
+class _ListView_DataMoveState extends State<ListView_DataMove> {
+  static List<String> animalName = <String>[
     'Bear',
     'Camel',
     'Deer',

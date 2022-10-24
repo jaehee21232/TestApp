@@ -5,12 +5,13 @@ import 'package:testapp/page/onboarding.dart';
 
 class HomeBuilder extends StatelessWidget {
   HomeBuilder({super.key});
-  final List<Widget> pages = <Widget>[
+
+  final List<Widget> pages = const <Widget>[
     OnBoardingPage(),
     ListViewPage(),
-    listviewdataandpage()
+    ListView_DataMove()
   ];
-  final List<String> Texts = <String>[
+  final List<String> Texts = const <String>[
     "OnBoardingPage",
     "ListView&Dialog",
     "ListView&DataMove"
