@@ -1,11 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:testapp/page/listview_data.dart';
 import 'package:testapp/page/listview_dialog.dart';
 import 'package:testapp/page/onboarding.dart';
 
 class HomeBuilder extends StatelessWidget {
   HomeBuilder({super.key});
-  final List<Widget> pages = <Widget>[OnBoardingPage(), ListViewPage()];
-  final List<String> Texts = <String>["OnBoardingPage", "ListView&Dialog"];
+  final List<Widget> pages = <Widget>[
+    OnBoardingPage(),
+    ListViewPage(),
+    listviewdataandpage()
+  ];
+  final List<String> Texts = <String>[
+    "OnBoardingPage",
+    "ListView&Dialog",
+    "ListView&DataMove"
+  ];
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
