@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:testapp/page/animal_page.dart';
 
 import '../model/listviewdata_model.dart';
 
@@ -65,6 +66,12 @@ class _ListView_DataMoveState extends State<ListView_DataMove> {
                   height: 50,
                   child: Image.asset(animalData[index].imgPath),
                 ),
+                onTap: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => AnimalPage(
+                            animal: animalData[index],
+                          )));
+                },
               ),
             );
           })),
