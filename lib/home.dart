@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:testapp/page/listview_data.dart';
 import 'package:testapp/page/listview_dialog.dart';
 import 'package:testapp/page/onboarding.dart';
+import 'package:testapp/page/provider_test.dart';
 
 class HomeBuilder extends StatelessWidget {
   HomeBuilder({super.key});
@@ -9,12 +10,14 @@ class HomeBuilder extends StatelessWidget {
   final List<Widget> pages = const <Widget>[
     OnBoardingPage(),
     ListViewPage(),
-    ListView_DataMove()
+    ListView_DataMove(),
+    FisOrder(),
   ];
   final List<String> Texts = const <String>[
     "OnBoardingPage",
     "ListView&Dialog",
-    "ListView&DataMove"
+    "ListView&DataMove",
+    "Provider",
   ];
   @override
   Widget build(BuildContext context) {

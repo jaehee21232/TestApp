@@ -56,7 +56,7 @@ class SpicyA extends StatelessWidget {
     return Column(
       children: [
         Text(
-          "Fish number",
+          "Fish number: ${Provider.of<FishModel>(context).number}",
           style: TextStyle(
             fontSize: 16,
             color: Colors.red,
@@ -64,7 +64,7 @@ class SpicyA extends StatelessWidget {
           ),
         ),
         Text(
-          "Fish size",
+          "Fish size: ${Provider.of<FishModel>(context).size}",
           style: TextStyle(
             fontSize: 16,
             color: Colors.red,
@@ -74,7 +74,11 @@ class SpicyA extends StatelessWidget {
         SizedBox(
           height: 20,
         ),
-        Middle(),
+        ElevatedButton(
+            onPressed: () {
+              Provider.of<FishModel>(context, listen: false).ChangeNotifier();
+            },
+            child: Text("Change fish number"))
       ],
     );
   }
