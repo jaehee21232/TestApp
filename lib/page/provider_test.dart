@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:testapp/model/fish_model.dart';
 
 class FisOrder extends StatelessWidget {
   const FisOrder({super.key});
@@ -14,7 +15,7 @@ class FisOrder extends StatelessWidget {
           child: Column(
         children: [
           Text(
-            'Fish name',
+            'Fish name: ${Provider.of<FishModel>(context).name}',
             style: TextStyle(fontSize: 20),
           ),
           SizedBox(
@@ -72,7 +73,8 @@ class SpicyA extends StatelessWidget {
         ),
         SizedBox(
           height: 20,
-        )
+        ),
+        Middle(),
       ],
     );
   }
