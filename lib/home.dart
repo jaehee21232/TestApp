@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:testapp/page/chatAppMain.dart';
 import 'package:testapp/page/listview_data.dart';
 import 'package:testapp/page/listview_dialog.dart';
 import 'package:testapp/page/onboarding.dart';
@@ -12,12 +13,14 @@ class HomeBuilder extends StatelessWidget {
     ListViewPage(),
     ListView_DataMove(),
     FisOrder(),
+    LoginSinUpScreen(),
   ];
   final List<String> Texts = const <String>[
     "OnBoardingPage",
     "ListView&Dialog",
     "ListView&DataMove",
     "Provider",
+    "ChatApp",
   ];
   @override
   Widget build(BuildContext context) {
