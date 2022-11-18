@@ -62,6 +62,7 @@ class _LoginSinUpScreenState extends State<LoginSinUpScreen> {
               ),
             ),
           ),
+          //배경
           Positioned(
             top: 180,
             child: Container(
@@ -138,23 +139,113 @@ class _LoginSinUpScreenState extends State<LoginSinUpScreen> {
                   ],
                 ),
                 Container(
+                  margin: const EdgeInsets.only(top: 20),
                   child: Form(
-                      child: Column(
-                    children: [
-                      TextFormField(
-                        decoration: InputDecoration(
-                            prefixIcon: Icon(
-                              Icons.account_circle,
-                              color: Palette.iconColor,
-                            ),
-                            enabledBorder: Oupt),
-                      ),
-                    ],
-                  )),
+                    child: Column(
+                      children: [
+                        TextFormField(
+                          decoration: InputDecoration(
+                              prefixIcon: Icon(
+                                Icons.account_circle,
+                                color: Palette.iconColor,
+                              ),
+                              enabledBorder: OutlineInputBorder(
+                                borderSide: BorderSide(
+                                  color: Palette.textColor1,
+                                ),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(35.0)),
+                              ),
+                              focusedBorder: OutlineInputBorder(
+                                borderSide: BorderSide(
+                                  color: Palette.textColor1,
+                                ),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(35.0)),
+                              ),
+                              hintText: "User name",
+                              hintStyle: TextStyle(
+                                fontSize: 14,
+                                color: Palette.textColor1,
+                              ),
+                              contentPadding: EdgeInsets.all(10)),
+                        ),
+                        SizedBox(
+                          height: 8,
+                        ),
+                        TextFormField(
+                          decoration: InputDecoration(
+                              prefixIcon: Icon(
+                                Icons.account_circle,
+                                color: Palette.iconColor,
+                              ),
+                              enabledBorder: OutlineInputBorder(
+                                borderSide: BorderSide(
+                                  color: Palette.textColor1,
+                                ),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(35.0)),
+                              ),
+                              focusedBorder: OutlineInputBorder(
+                                borderSide: BorderSide(
+                                  color: Palette.textColor1,
+                                ),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(35.0)),
+                              ),
+                              hintText: "User name",
+                              hintStyle: TextStyle(
+                                fontSize: 14,
+                                color: Palette.textColor1,
+                              ),
+                              contentPadding: EdgeInsets.all(10)),
+                        ),
+                        SizedBox(
+                          height: 8,
+                        ),
+                        TextFormField(
+                          decoration: InputDecoration(
+                              prefixIcon: Icon(
+                                Icons.account_circle,
+                                color: Palette.iconColor,
+                              ),
+                              enabledBorder: OutlineInputBorder(
+                                borderSide: BorderSide(
+                                  color: Palette.textColor1,
+                                ),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(35.0)),
+                              ),
+                              focusedBorder: OutlineInputBorder(
+                                borderSide: BorderSide(
+                                  color: Palette.textColor1,
+                                ),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(35.0)),
+                              ),
+                              hintText: "User name",
+                              hintStyle: TextStyle(
+                                fontSize: 14,
+                                color: Palette.textColor1,
+                              ),
+                              contentPadding: EdgeInsets.all(10)),
+                        ),
+                      ],
+                    ),
+                  ),
                 )
               ]),
             ),
           ),
+          //텍스트 폼 필드
+          Positioned(
+              top: 100,
+              child: Container(
+                height: 90,
+                width: 90,
+                decoration: BoxDecoration(),
+                child: Container(),
+              ))
         ],
       ),
     );
