@@ -239,13 +239,50 @@ class _LoginSinUpScreenState extends State<LoginSinUpScreen> {
           ),
           //텍스트 폼 필드
           Positioned(
-              top: 100,
-              child: Container(
-                height: 90,
-                width: 90,
-                decoration: BoxDecoration(),
-                child: Container(),
-              ))
+              top: 430,
+              right: 0,
+              left: 0,
+              child: Center(
+                child: Container(
+                  padding: EdgeInsets.all(15),
+                  height: 90,
+                  width: 90,
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(50)),
+                  child: Container(
+                    decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                            colors: [Colors.orange, Colors.red],
+                            begin: Alignment.topLeft,
+                            end: Alignment.bottomRight),
+                        borderRadius: BorderRadius.circular(30),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black.withOpacity(0.3),
+                            spreadRadius: 1,
+                            blurRadius: 1,
+                            offset: Offset(0, 1),
+                          ),
+                        ]),
+                    child: Icon(
+                      Icons.arrow_forward,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+              )),
+          //전송버튼
+          Positioned(
+            top: size.height - 125,
+            right: 0,
+            left: 0,
+            child: Column(children: [Text("or Singup with"),TextButton.icon(onPressed: (){},icon: ,label: ,style: TextButton.styleFrom(primary: Colors.white,minimumSize: Size(155,40),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(20),
+            ),
+            backgroundColor: Palette.googleColor),)]),
+          )
         ],
       ),
     );

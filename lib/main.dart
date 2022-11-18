@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:testapp/Home.dart';
 import 'package:provider/provider.dart';
 import 'package:testapp/model/fish_model.dart';
+import 'package:testapp/model/seafish_model.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,8 +14,17 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-      create: (context) => FishModel(name: 'salmon', number: 10, size: 'big'),
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(
+          create: (context) =>
+              FishModel(name: 'salmon', number: 10, size: 'big'),
+        ),
+        ChangeNotifierProvider(
+          create: (context) =>
+              SeaFishModel(name: 'salmon', tunanumber: 10, size: 'middle'),
+        )
+      ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: '연습',

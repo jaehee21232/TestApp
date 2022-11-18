@@ -67,10 +67,13 @@ class _ListView_DataMoveState extends State<ListView_DataMove> {
                   child: Image.asset(animalData[index].imgPath),
                 ),
                 onTap: () {
-                  Navigator.of(context).push(MaterialPageRoute(
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
                       builder: (context) => AnimalPage(
-                            animal: animalData[index],
-                          )));
+                        animal: animalData[index],
+                      ),
+                    ),
+                  );
                 },
               ),
             );
