@@ -277,11 +277,21 @@ class _LoginSinUpScreenState extends State<LoginSinUpScreen> {
             top: size.height - 125,
             right: 0,
             left: 0,
-            child: Column(children: [Text("or Singup with"),TextButton.icon(onPressed: (){},icon: ,label: ,style: TextButton.styleFrom(primary: Colors.white,minimumSize: Size(155,40),
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(20),
-            ),
-            backgroundColor: Palette.googleColor),)]),
+            child: Column(children: [
+              Text("or Singup with"),
+              TextButton.icon(
+                onPressed: () {},
+                icon: Icon(Icons.add),
+                label: Text("Google"),
+                style: TextButton.styleFrom(
+                    primary: Colors.white,
+                    minimumSize: Size(155, 40),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    backgroundColor: Palette.googleColor),
+              )
+            ]),
           )
         ],
       ),
