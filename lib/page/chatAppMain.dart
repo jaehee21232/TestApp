@@ -42,7 +42,9 @@ class _LoginSinUpScreenState extends State<LoginSinUpScreen> {
                           ),
                           children: [
                             TextSpan(
-                                text: " to Yummy chat!",
+                                text: isSingupScreen
+                                    ? " to Yummy chat!"
+                                    : " back",
                                 style: TextStyle(
                                     letterSpacing: 1.0,
                                     fontSize: size.width * 0.05,
@@ -53,8 +55,10 @@ class _LoginSinUpScreenState extends State<LoginSinUpScreen> {
                     const SizedBox(
                       height: 5,
                     ),
-                    const Text(
-                      "Singup to continue",
+                    Text(
+                      isSingupScreen
+                          ? "Singup to continue"
+                          : "Signin to continue",
                       style: TextStyle(color: Colors.white, letterSpacing: 1.0),
                     )
                   ],
@@ -138,102 +142,103 @@ class _LoginSinUpScreenState extends State<LoginSinUpScreen> {
                     )
                   ],
                 ),
-                Container(
-                  margin: const EdgeInsets.only(top: 20),
-                  child: Form(
-                    child: Column(
-                      children: [
-                        TextFormField(
-                          decoration: InputDecoration(
-                              prefixIcon: Icon(
-                                Icons.account_circle,
-                                color: Palette.iconColor,
-                              ),
-                              enabledBorder: OutlineInputBorder(
-                                borderSide: BorderSide(
+                if (isSingupScreen)
+                  Container(
+                    margin: const EdgeInsets.only(top: 20),
+                    child: Form(
+                      child: Column(
+                        children: [
+                          TextFormField(
+                            decoration: InputDecoration(
+                                prefixIcon: Icon(
+                                  Icons.account_circle,
+                                  color: Palette.iconColor,
+                                ),
+                                enabledBorder: OutlineInputBorder(
+                                  borderSide: BorderSide(
+                                    color: Palette.textColor1,
+                                  ),
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(35.0)),
+                                ),
+                                focusedBorder: OutlineInputBorder(
+                                  borderSide: BorderSide(
+                                    color: Palette.textColor1,
+                                  ),
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(35.0)),
+                                ),
+                                hintText: "User name",
+                                hintStyle: TextStyle(
+                                  fontSize: 14,
                                   color: Palette.textColor1,
                                 ),
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(35.0)),
-                              ),
-                              focusedBorder: OutlineInputBorder(
-                                borderSide: BorderSide(
+                                contentPadding: EdgeInsets.all(10)),
+                          ),
+                          SizedBox(
+                            height: 8,
+                          ),
+                          TextFormField(
+                            decoration: InputDecoration(
+                                prefixIcon: Icon(
+                                  Icons.account_circle,
+                                  color: Palette.iconColor,
+                                ),
+                                enabledBorder: OutlineInputBorder(
+                                  borderSide: BorderSide(
+                                    color: Palette.textColor1,
+                                  ),
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(35.0)),
+                                ),
+                                focusedBorder: OutlineInputBorder(
+                                  borderSide: BorderSide(
+                                    color: Palette.textColor1,
+                                  ),
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(35.0)),
+                                ),
+                                hintText: "User name",
+                                hintStyle: TextStyle(
+                                  fontSize: 14,
                                   color: Palette.textColor1,
                                 ),
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(35.0)),
-                              ),
-                              hintText: "User name",
-                              hintStyle: TextStyle(
-                                fontSize: 14,
-                                color: Palette.textColor1,
-                              ),
-                              contentPadding: EdgeInsets.all(10)),
-                        ),
-                        SizedBox(
-                          height: 8,
-                        ),
-                        TextFormField(
-                          decoration: InputDecoration(
-                              prefixIcon: Icon(
-                                Icons.account_circle,
-                                color: Palette.iconColor,
-                              ),
-                              enabledBorder: OutlineInputBorder(
-                                borderSide: BorderSide(
+                                contentPadding: EdgeInsets.all(10)),
+                          ),
+                          SizedBox(
+                            height: 8,
+                          ),
+                          TextFormField(
+                            decoration: InputDecoration(
+                                prefixIcon: Icon(
+                                  Icons.account_circle,
+                                  color: Palette.iconColor,
+                                ),
+                                enabledBorder: OutlineInputBorder(
+                                  borderSide: BorderSide(
+                                    color: Palette.textColor1,
+                                  ),
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(35.0)),
+                                ),
+                                focusedBorder: OutlineInputBorder(
+                                  borderSide: BorderSide(
+                                    color: Palette.textColor1,
+                                  ),
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(35.0)),
+                                ),
+                                hintText: "User name",
+                                hintStyle: TextStyle(
+                                  fontSize: 14,
                                   color: Palette.textColor1,
                                 ),
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(35.0)),
-                              ),
-                              focusedBorder: OutlineInputBorder(
-                                borderSide: BorderSide(
-                                  color: Palette.textColor1,
-                                ),
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(35.0)),
-                              ),
-                              hintText: "User name",
-                              hintStyle: TextStyle(
-                                fontSize: 14,
-                                color: Palette.textColor1,
-                              ),
-                              contentPadding: EdgeInsets.all(10)),
-                        ),
-                        SizedBox(
-                          height: 8,
-                        ),
-                        TextFormField(
-                          decoration: InputDecoration(
-                              prefixIcon: Icon(
-                                Icons.account_circle,
-                                color: Palette.iconColor,
-                              ),
-                              enabledBorder: OutlineInputBorder(
-                                borderSide: BorderSide(
-                                  color: Palette.textColor1,
-                                ),
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(35.0)),
-                              ),
-                              focusedBorder: OutlineInputBorder(
-                                borderSide: BorderSide(
-                                  color: Palette.textColor1,
-                                ),
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(35.0)),
-                              ),
-                              hintText: "User name",
-                              hintStyle: TextStyle(
-                                fontSize: 14,
-                                color: Palette.textColor1,
-                              ),
-                              contentPadding: EdgeInsets.all(10)),
-                        ),
-                      ],
+                                contentPadding: EdgeInsets.all(10)),
+                          ),
+                        ],
+                      ),
                     ),
-                  ),
-                )
+                  )
               ]),
             ),
           ),
@@ -278,7 +283,10 @@ class _LoginSinUpScreenState extends State<LoginSinUpScreen> {
             right: 0,
             left: 0,
             child: Column(children: [
-              Text("or Singup with"),
+              const Text("or Singup with"),
+              const SizedBox(
+                height: 10,
+              ),
               TextButton.icon(
                 onPressed: () {},
                 icon: Icon(Icons.add),
