@@ -67,11 +67,15 @@ class _LoginSinUpScreenState extends State<LoginSinUpScreen> {
             ),
           ),
           //배경
-          Positioned(
+          AnimatedPositioned(
+            duration: Duration(milliseconds: 400),
+            curve: Curves.easeIn,
             top: 180,
-            child: Container(
+            child: AnimatedContainer(
+              duration: Duration(milliseconds: 400),
+              curve: Curves.easeIn,
               padding: EdgeInsets.all(20),
-              height: 280,
+              height: isSingupScreen ? 280 : 250,
               width: size.width - 40,
               margin: EdgeInsets.symmetric(horizontal: 20),
               decoration: BoxDecoration(
@@ -181,7 +185,7 @@ class _LoginSinUpScreenState extends State<LoginSinUpScreen> {
                           TextFormField(
                             decoration: InputDecoration(
                                 prefixIcon: Icon(
-                                  Icons.account_circle,
+                                  Icons.email,
                                   color: Palette.iconColor,
                                 ),
                                 enabledBorder: OutlineInputBorder(
@@ -198,7 +202,7 @@ class _LoginSinUpScreenState extends State<LoginSinUpScreen> {
                                   borderRadius:
                                       BorderRadius.all(Radius.circular(35.0)),
                                 ),
-                                hintText: "User name",
+                                hintText: "email",
                                 hintStyle: TextStyle(
                                   fontSize: 14,
                                   color: Palette.textColor1,
@@ -211,7 +215,7 @@ class _LoginSinUpScreenState extends State<LoginSinUpScreen> {
                           TextFormField(
                             decoration: InputDecoration(
                                 prefixIcon: Icon(
-                                  Icons.account_circle,
+                                  Icons.lock,
                                   color: Palette.iconColor,
                                 ),
                                 enabledBorder: OutlineInputBorder(
@@ -228,7 +232,7 @@ class _LoginSinUpScreenState extends State<LoginSinUpScreen> {
                                   borderRadius:
                                       BorderRadius.all(Radius.circular(35.0)),
                                 ),
-                                hintText: "User name",
+                                hintText: "password",
                                 hintStyle: TextStyle(
                                   fontSize: 14,
                                   color: Palette.textColor1,
@@ -238,13 +242,81 @@ class _LoginSinUpScreenState extends State<LoginSinUpScreen> {
                         ],
                       ),
                     ),
-                  )
+                  ),
+                if (!isSingupScreen)
+                  Container(
+                    margin: EdgeInsets.only(top: 30),
+                    child: Form(
+                        child: Column(
+                      children: [
+                        TextFormField(
+                          decoration: InputDecoration(
+                              prefixIcon: Icon(
+                                Icons.email,
+                                color: Palette.iconColor,
+                              ),
+                              enabledBorder: OutlineInputBorder(
+                                borderSide: BorderSide(
+                                  color: Palette.textColor1,
+                                ),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(35.0)),
+                              ),
+                              focusedBorder: OutlineInputBorder(
+                                borderSide: BorderSide(
+                                  color: Palette.textColor1,
+                                ),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(35.0)),
+                              ),
+                              hintText: "email",
+                              hintStyle: TextStyle(
+                                fontSize: 14,
+                                color: Palette.textColor1,
+                              ),
+                              contentPadding: EdgeInsets.all(10)),
+                        ),
+                        SizedBox(
+                          height: 8,
+                        ),
+                        TextFormField(
+                          decoration: InputDecoration(
+                              prefixIcon: Icon(
+                                Icons.lock,
+                                color: Palette.iconColor,
+                              ),
+                              enabledBorder: OutlineInputBorder(
+                                borderSide: BorderSide(
+                                  color: Palette.textColor1,
+                                ),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(35.0)),
+                              ),
+                              focusedBorder: OutlineInputBorder(
+                                borderSide: BorderSide(
+                                  color: Palette.textColor1,
+                                ),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(35.0)),
+                              ),
+                              hintText: "password",
+                              hintStyle: TextStyle(
+                                fontSize: 14,
+                                color: Palette.textColor1,
+                              ),
+                              contentPadding: EdgeInsets.all(10)),
+                        ),
+                      ],
+                    )),
+                  ),
               ]),
             ),
           ),
           //텍스트 폼 필드
-          Positioned(
-              top: 430,
+          AnimatedPositioned(
+              duration: Duration(milliseconds: 400),
+              curve: Curves.easeIn,
+              top: isSingupScreen ? 420 : 390,
               right: 0,
               left: 0,
               child: Center(
@@ -283,7 +355,7 @@ class _LoginSinUpScreenState extends State<LoginSinUpScreen> {
             right: 0,
             left: 0,
             child: Column(children: [
-              const Text("or Singup with"),
+              Text(isSingupScreen ? "or Singup with" : "or Signin with"),
               const SizedBox(
                 height: 10,
               ),
