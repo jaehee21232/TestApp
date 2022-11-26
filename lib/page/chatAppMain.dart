@@ -153,6 +153,7 @@ class _LoginSinUpScreenState extends State<LoginSinUpScreen> {
                       child: Column(
                         children: [
                           TextFormField(
+                            key: ValueKey(1),
                             decoration: InputDecoration(
                                 prefixIcon: Icon(
                                   Icons.account_circle,
@@ -183,6 +184,7 @@ class _LoginSinUpScreenState extends State<LoginSinUpScreen> {
                             height: 8,
                           ),
                           TextFormField(
+                            key: ValueKey(2),
                             decoration: InputDecoration(
                                 prefixIcon: Icon(
                                   Icons.email,
@@ -213,6 +215,7 @@ class _LoginSinUpScreenState extends State<LoginSinUpScreen> {
                             height: 8,
                           ),
                           TextFormField(
+                            key: ValueKey(3),
                             decoration: InputDecoration(
                                 prefixIcon: Icon(
                                   Icons.lock,
@@ -250,6 +253,7 @@ class _LoginSinUpScreenState extends State<LoginSinUpScreen> {
                         child: Column(
                       children: [
                         TextFormField(
+                          key: ValueKey(4),
                           decoration: InputDecoration(
                               prefixIcon: Icon(
                                 Icons.email,
@@ -280,6 +284,7 @@ class _LoginSinUpScreenState extends State<LoginSinUpScreen> {
                           height: 8,
                         ),
                         TextFormField(
+                          key: ValueKey(5),
                           decoration: InputDecoration(
                               prefixIcon: Icon(
                                 Icons.lock,
