@@ -154,6 +154,12 @@ class _LoginSinUpScreenState extends State<LoginSinUpScreen> {
                         children: [
                           TextFormField(
                             key: ValueKey(1),
+                            validator: (value) {
+                              if (value!.isEmpty || value.length < 4) {
+                                return "Please enter at least 4 charcters";
+                              }
+                              return null;
+                            },
                             decoration: InputDecoration(
                                 prefixIcon: Icon(
                                   Icons.account_circle,
@@ -185,6 +191,12 @@ class _LoginSinUpScreenState extends State<LoginSinUpScreen> {
                           ),
                           TextFormField(
                             key: ValueKey(2),
+                            validator: (value) {
+                              if (value!.isEmpty || value.contains("@")) {
+                                return "Please enter a valid email address.";
+                              }
+                              return null;
+                            },
                             decoration: InputDecoration(
                                 prefixIcon: Icon(
                                   Icons.email,
