@@ -3,8 +3,11 @@ import 'package:testapp/Home.dart';
 import 'package:provider/provider.dart';
 import 'package:testapp/model/fish_model.dart';
 import 'package:testapp/model/seafish_model.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  Firebase.initializeApp();
   runApp(const MyApp());
 }
 
