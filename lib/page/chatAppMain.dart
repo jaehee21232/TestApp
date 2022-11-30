@@ -172,6 +172,7 @@ class _LoginSinUpScreenState extends State<LoginSinUpScreen> {
                           child: Column(
                             children: [
                               TextFormField(
+                                keyboardType: TextInputType.emailAddress,
                                 key: ValueKey(1),
                                 validator: (value) {
                                   if (value!.isEmpty || value.length < 4) {
@@ -310,6 +311,7 @@ class _LoginSinUpScreenState extends State<LoginSinUpScreen> {
                             child: Column(
                               children: [
                                 TextFormField(
+                                  keyboardType: TextInputType.emailAddress,
                                   key: ValueKey(4),
                                   validator: (value) {
                                     if (value!.isEmpty || value.contains("@")) {
