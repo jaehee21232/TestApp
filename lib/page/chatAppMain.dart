@@ -182,6 +182,9 @@ class _LoginSinUpScreenState extends State<LoginSinUpScreen> {
                                 onSaved: ((value) {
                                   userName = value!;
                                 }),
+                                onChanged: (value) {
+                                  userName = value;
+                                },
                                 decoration: InputDecoration(
                                     prefixIcon: Icon(
                                       Icons.account_circle,
@@ -222,6 +225,9 @@ class _LoginSinUpScreenState extends State<LoginSinUpScreen> {
                                 onSaved: ((value) {
                                   userEmail = value!;
                                 }),
+                                onChanged: (value) {
+                                  userEmail = value;
+                                },
                                 decoration: InputDecoration(
                                     prefixIcon: Icon(
                                       Icons.email,
@@ -252,6 +258,7 @@ class _LoginSinUpScreenState extends State<LoginSinUpScreen> {
                                 height: 8,
                               ),
                               TextFormField(
+                                obscureText: true,
                                 key: ValueKey(3),
                                 validator: ((value) {
                                   if (value!.isEmpty || value.length < 6) {
@@ -261,6 +268,9 @@ class _LoginSinUpScreenState extends State<LoginSinUpScreen> {
                                 }),
                                 onSaved: ((value) {
                                   userPassword = value!;
+                                }),
+                                onChanged: ((value) {
+                                  userPassword = value;
                                 }),
                                 decoration: InputDecoration(
                                     prefixIcon: Icon(
@@ -310,6 +320,9 @@ class _LoginSinUpScreenState extends State<LoginSinUpScreen> {
                                   onSaved: ((value) {
                                     userPassword = value!;
                                   }),
+                                  onChanged: (value) {
+                                    userEmail = value;
+                                  },
                                   decoration: InputDecoration(
                                       prefixIcon: Icon(
                                         Icons.email,
@@ -340,6 +353,7 @@ class _LoginSinUpScreenState extends State<LoginSinUpScreen> {
                                   height: 8,
                                 ),
                                 TextFormField(
+                                  obscureText: true,
                                   key: ValueKey(5),
                                   validator: ((value) {
                                     if (value!.isEmpty || value.length < 6) {
@@ -349,6 +363,9 @@ class _LoginSinUpScreenState extends State<LoginSinUpScreen> {
                                   }),
                                   onSaved: ((value) {
                                     userPassword = value!;
+                                  }),
+                                  onChanged: ((value) {
+                                    userPassword = value;
                                   }),
                                   decoration: InputDecoration(
                                       prefixIcon: Icon(
@@ -401,6 +418,9 @@ class _LoginSinUpScreenState extends State<LoginSinUpScreen> {
                     child: GestureDetector(
                       onTap: () {
                         _tryValidation();
+                        print(userName);
+                        print(userEmail);
+                        print(userPassword);
                       },
                       child: Container(
                         decoration: BoxDecoration(
