@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:testapp/config/palette.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class LoginSinUpScreen extends StatefulWidget {
   const LoginSinUpScreen({Key? key}) : super(key: key);
@@ -9,6 +10,7 @@ class LoginSinUpScreen extends StatefulWidget {
 }
 
 class _LoginSinUpScreenState extends State<LoginSinUpScreen> {
+  final _authentication = FirebaseAuth.instance;
   bool isSingupScreen = true;
   final _formKey = GlobalKey<FormState>();
   String userName = '';
