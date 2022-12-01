@@ -427,6 +427,8 @@ class _LoginSinUpScreenState extends State<LoginSinUpScreen> {
                             final newUser = await _authentication
                                 .createUserWithEmailAndPassword(
                                     email: userEmail, password: userPassword);
+
+                            if (newUser.user != null) {}
                           } catch (e) {
                             print(e);
                             ScaffoldMessenger.of(context).showSnackBar(
