@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:testapp/config/palette.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:testapp/page/chat_screen.dart';
 
 class LoginSinUpScreen extends StatefulWidget {
   const LoginSinUpScreen({Key? key}) : super(key: key);
@@ -218,9 +219,10 @@ class _LoginSinUpScreenState extends State<LoginSinUpScreen> {
                                 height: 8,
                               ),
                               TextFormField(
+                                keyboardType: TextInputType.emailAddress,
                                 key: ValueKey(2),
                                 validator: (value) {
-                                  if (value!.isEmpty || value.contains("@")) {
+                                  if (value!.isEmpty || !value.contains("@")) {
                                     return "Please enter a valid email address.";
                                   }
                                   return null;
@@ -428,7 +430,13 @@ class _LoginSinUpScreenState extends State<LoginSinUpScreen> {
                                 .createUserWithEmailAndPassword(
                                     email: userEmail, password: userPassword);
 
-                            if (newUser.user != null) {}
+                            if (newUser.user != null) {
+                              Navigator.push(context, MaterialPageRoute(
+                                builder: (context) {
+                                  return ChatScreen();
+                                },
+                              ));
+                            }
                           } catch (e) {
                             print(e);
                             ScaffoldMessenger.of(context).showSnackBar(
