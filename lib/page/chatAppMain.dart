@@ -420,11 +420,24 @@ class _LoginSinUpScreenState extends State<LoginSinUpScreen> {
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(50)),
                     child: GestureDetector(
-                      onTap: () {
-                        _tryValidation();
-                        print(userName);
-                        print(userEmail);
-                        print(userPassword);
+                      onTap: () async {
+                        if (isSingupScreen) {
+                          _tryValidation();
+                          try {
+                            final newUser = await _authentication
+                                .createUserWithEmailAndPassword(
+                                    email: userEmail, password: userPassword);
+                          } catch (e) {
+                            print(e);
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(
+                                content: Text(
+                                    "Please check your email and password"),
+                                backgroundColor: Colors.blue,
+                              ),
+                            );
+                          }
+                        }
                       },
                       child: Container(
                         decoration: BoxDecoration(
