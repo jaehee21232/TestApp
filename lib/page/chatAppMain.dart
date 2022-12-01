@@ -318,13 +318,14 @@ class _LoginSinUpScreenState extends State<LoginSinUpScreen> {
                                   keyboardType: TextInputType.emailAddress,
                                   key: ValueKey(4),
                                   validator: (value) {
-                                    if (value!.isEmpty || value.contains("@")) {
+                                    if (value!.isEmpty ||
+                                        !value.contains("@")) {
                                       return "Please enter a valid email address.";
                                     }
                                     return null;
                                   },
                                   onSaved: ((value) {
-                                    userPassword = value!;
+                                    userEmail = value!;
                                   }),
                                   onChanged: (value) {
                                     userEmail = value;
@@ -431,11 +432,14 @@ class _LoginSinUpScreenState extends State<LoginSinUpScreen> {
                                     email: userEmail, password: userPassword);
 
                             if (newUser.user != null) {
-                              Navigator.push(context, MaterialPageRoute(
-                                builder: (context) {
-                                  return ChatScreen();
-                                },
-                              ));
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) {
+                                    return ChatScreen();
+                                  },
+                                ),
+                              );
                             }
                           } catch (e) {
                             print(e);
@@ -446,6 +450,29 @@ class _LoginSinUpScreenState extends State<LoginSinUpScreen> {
                                 backgroundColor: Colors.blue,
                               ),
                             );
+                          }
+                        }
+                        if (!isSingupScreen) {
+                          _tryValidation();
+
+                          try {
+                            final newUser = await _authentication
+                                .signInWithEmailAndPassword(
+                              email: userEmail,
+                              password: userPassword,
+                            );
+                            if (newUser.user != null) {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) {
+                                    return ChatScreen();
+                                  },
+                                ),
+                              );
+                            }
+                          } catch (e) {
+                            print(e);
                           }
                         }
                       },
