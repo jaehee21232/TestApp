@@ -49,7 +49,7 @@ class _CounterState extends State<Counter> {
   Stream<int> addStreamValue() {
     return Stream<int>.periodic(
       Duration(seconds: 1),
-      (computationCount) => price + 1,
+      (count) => price + count,
     );
   }
 }
