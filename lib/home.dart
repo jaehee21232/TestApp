@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:testapp/page/chatAppMain.dart';
+import 'package:testapp/page/inflearns.dart';
 import 'package:testapp/page/listview_data.dart';
 import 'package:testapp/page/listview_dialog.dart';
 import 'package:testapp/page/onboarding.dart';
@@ -15,7 +16,8 @@ class HomeBuilder extends StatelessWidget {
     ListView_DataMove(),
     FisOrder(),
     LoginSinUpScreen(),
-    StreamExam()
+    StreamExam(),
+    Inflearns(),
   ];
   final List<String> Texts = const <String>[
     "OnBoardingPage",
@@ -24,6 +26,7 @@ class HomeBuilder extends StatelessWidget {
     "Provider",
     "ChatApp",
     "StreamExam",
+    "Inflearns"
   ];
   @override
   Widget build(BuildContext context) {
