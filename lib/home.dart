@@ -6,6 +6,7 @@ import 'package:testapp/page/listview_dialog.dart';
 import 'package:testapp/page/onboarding.dart';
 import 'package:testapp/page/provider_test.dart';
 import 'package:testapp/page/stream_exam.dart';
+import 'package:testapp/page/Fluwidgets.dart';
 
 class HomeBuilder extends StatelessWidget {
   HomeBuilder({super.key});
@@ -18,6 +19,7 @@ class HomeBuilder extends StatelessWidget {
     LoginSinUpScreen(),
     StreamExam(),
     Inflearns(),
+    Fluwidgets(),
   ];
   final List<String> Texts = const <String>[
     "OnBoardingPage",
@@ -26,7 +28,8 @@ class HomeBuilder extends StatelessWidget {
     "Provider",
     "ChatApp",
     "StreamExam",
-    "Inflearns"
+    "Inflearns",
+    "Widgets"
   ];
   @override
   Widget build(BuildContext context) {
