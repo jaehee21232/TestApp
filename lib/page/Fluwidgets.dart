@@ -4,7 +4,7 @@ import 'package:testapp/widgets/AnimatedOpacity.dart';
 import 'package:testapp/widgets/Drawer.dart';
 import 'package:testapp/widgets/OrientationBuilder.dart';
 import 'package:testapp/widgets/SnackBar.dart';
-import 'package:testapp/widgets/TanController.dart';
+import 'package:testapp/widgets/TabController.dart';
 
 class Fluwidgets extends StatelessWidget {
   const Fluwidgets({super.key});
