@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:testapp/page/Form_Validation.dart';
 import 'package:testapp/page/chatAppMain.dart';
 import 'package:testapp/page/inflearns.dart';
 import 'package:testapp/page/listview_data.dart';
@@ -12,6 +13,7 @@ class HomeBuilder extends StatelessWidget {
   HomeBuilder({super.key});
 
   final List<Widget> pages = const <Widget>[
+    Fluwidgets(),
     OnBoardingPage(),
     ListViewPage(),
     ListView_DataMove(),
@@ -19,9 +21,10 @@ class HomeBuilder extends StatelessWidget {
     LoginSinUpScreen(),
     StreamExam(),
     Inflearns(),
-    Fluwidgets(),
+    FormValidation(),
   ];
   final List<String> Texts = const <String>[
+    "Widgets",
     "OnBoardingPage",
     "ListView&Dialog",
     "ListView&DataMove",
@@ -29,7 +32,7 @@ class HomeBuilder extends StatelessWidget {
     "ChatApp",
     "StreamExam",
     "Inflearns",
-    "Widgets"
+    "FormValidation"
   ];
   @override
   Widget build(BuildContext context) {
