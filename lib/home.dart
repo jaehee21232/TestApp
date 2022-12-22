@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:testapp/page/Dissmissible.dart';
 import 'package:testapp/page/Form_Validation.dart';
 import 'package:testapp/page/chatAppMain.dart';
+import 'package:testapp/page/fine_dust.dart';
 import 'package:testapp/page/inflearns.dart';
 import 'package:testapp/page/listview_data.dart';
 import 'package:testapp/page/listview_dialog.dart';
@@ -10,8 +12,6 @@ import 'package:testapp/page/stream_exam.dart';
 import 'package:testapp/page/Fluwidgets.dart';
 
 class HomeBuilder extends StatelessWidget {
-  HomeBuilder({super.key});
-
   final List<Widget> pages = const <Widget>[
     Fluwidgets(),
     OnBoardingPage(),
@@ -22,6 +22,8 @@ class HomeBuilder extends StatelessWidget {
     StreamExam(),
     Inflearns(),
     FormValidation(),
+    SwipeToDismiss(),
+    FineDustApp(),
   ];
   final List<String> Texts = const <String>[
     "Widgets",
@@ -32,13 +34,16 @@ class HomeBuilder extends StatelessWidget {
     "ChatApp",
     "StreamExam",
     "Inflearns",
-    "FormValidation"
+    "FormValidation",
+    "Dissmissible",
+    "미세먼지 앱"
   ];
+
+  const HomeBuilder({super.key});
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     var width = size.width;
-    var height = size.width;
     return Align(
       alignment: Alignment.topCenter,
       child: Container(
