@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:testapp/inflearns/one.dart';
+import 'package:testapp/page/fine_dust.dart';
 
 class Inflearns extends StatelessWidget {
   const Inflearns({super.key});
@@ -7,9 +8,11 @@ class Inflearns extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<Widget> pages = [
-      One(),
+      FineDustApp(),
     ];
-    List<String> name = ["중급 - Http통신, 상태관리"];
+    List<String> name = [
+      "미세먼지 앱",
+    ];
     var size = MediaQuery.of(context).size;
     var width = size.width;
     var height = size.width;

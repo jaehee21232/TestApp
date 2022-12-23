@@ -23,7 +23,6 @@ class HomeBuilder extends StatelessWidget {
     Inflearns(),
     FormValidation(),
     SwipeToDismiss(),
-    FineDustApp(),
   ];
   final List<String> Texts = const <String>[
     "Widgets",
@@ -36,7 +35,6 @@ class HomeBuilder extends StatelessWidget {
     "Inflearns",
     "FormValidation",
     "Dissmissible",
-    "미세먼지 앱"
   ];
 
   const HomeBuilder({super.key});
