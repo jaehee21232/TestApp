@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:testapp/page/Dissmissible.dart';
 import 'package:testapp/page/Form_Validation.dart';
+import 'package:testapp/page/Splash_Screen.dart';
 import 'package:testapp/page/chatAppMain.dart';
 import 'package:testapp/page/fine_dust.dart';
 import 'package:testapp/page/inflearns.dart';
@@ -23,6 +24,7 @@ class HomeBuilder extends StatelessWidget {
     Inflearns(),
     FormValidation(),
     SwipeToDismiss(),
+    SplashScreen(),
   ];
   final List<String> Texts = const <String>[
     "Widgets",
@@ -35,6 +37,7 @@ class HomeBuilder extends StatelessWidget {
     "Inflearns",
     "FormValidation",
     "Dissmissible",
+    "Loding Page",
   ];
 
   const HomeBuilder({super.key});
