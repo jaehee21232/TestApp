@@ -15,7 +15,6 @@ class _ChatScreenState extends State<ChatScreen> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     getCurrentUser();
   }
@@ -25,25 +24,22 @@ class _ChatScreenState extends State<ChatScreen> {
     try {
       if (user != null) {
         loggedUser = user;
-        print(loggedUser!.email);
       }
-    } catch (e) {
-      print(e);
-    }
+    } catch (e) {}
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Chat screen"),
+        title: const Text("Chat screen"),
         actions: [
           IconButton(
               onPressed: () {
                 _authentication.signOut();
                 Navigator.pop(context);
               },
-              icon: Icon(Icons.logout))
+              icon: const Icon(Icons.logout))
         ],
       ),
       body: StreamBuilder(
@@ -53,7 +49,7 @@ class _ChatScreenState extends State<ChatScreen> {
         builder: (BuildContext context,
             AsyncSnapshot<QuerySnapshot<Map<String, dynamic>>> snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
-            return Center(
+            return const Center(
               child: CircularProgressIndicator(),
             );
           }
@@ -63,10 +59,10 @@ class _ChatScreenState extends State<ChatScreen> {
             itemCount: docs.length,
             itemBuilder: (context, index) {
               return Container(
-                  padding: EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(8.0),
                   child: Text(
                     docs[index]['text'],
-                    style: TextStyle(fontSize: 20.0),
+                    style: const TextStyle(fontSize: 20.0),
                   ));
             },
           );

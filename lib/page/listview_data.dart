@@ -3,14 +3,14 @@ import 'package:testapp/page/animal_page.dart';
 
 import '../model/listviewdata_model.dart';
 
-class ListView_DataMove extends StatefulWidget {
-  const ListView_DataMove({super.key});
+class ListViewDataMove extends StatefulWidget {
+  const ListViewDataMove({super.key});
 
   @override
-  State<ListView_DataMove> createState() => _ListView_DataMoveState();
+  State<ListViewDataMove> createState() => _ListViewDataMoveState();
 }
 
-class _ListView_DataMoveState extends State<ListView_DataMove> {
+class _ListViewDataMoveState extends State<ListViewDataMove> {
   static List<String> animalName = <String>[
     'Bear',
     'Camel',

@@ -9,19 +9,19 @@ class FisOrder extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Fish Order"),
+        title: const Text("Fish Order"),
       ),
       body: Center(
           child: Column(
         children: [
           Text(
             'Fish name: ${Provider.of<FishModel>(context).name}',
-            style: TextStyle(fontSize: 20),
+            style: const TextStyle(fontSize: 20),
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
-          High()
+          const High()
         ],
       )),
     );
@@ -34,7 +34,7 @@ class High extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: [
+      children: const [
         Text(
           "SpicyA is located at high place",
           style: TextStyle(fontSize: 16),
@@ -57,7 +57,7 @@ class SpicyA extends StatelessWidget {
       children: [
         Text(
           "Fish number: ${Provider.of<FishModel>(context).number}",
-          style: TextStyle(
+          style: const TextStyle(
             fontSize: 16,
             color: Colors.red,
             fontWeight: FontWeight.bold,
@@ -65,20 +65,20 @@ class SpicyA extends StatelessWidget {
         ),
         Text(
           "Fish size: ${Provider.of<FishModel>(context).size}",
-          style: TextStyle(
+          style: const TextStyle(
             fontSize: 16,
             color: Colors.red,
             fontWeight: FontWeight.bold,
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 20,
         ),
         ElevatedButton(
             onPressed: () {
-              Provider.of<FishModel>(context, listen: false).ChangeNotifier();
+              Provider.of<FishModel>(context, listen: false).changenotifier();
             },
-            child: Text("Change fish number"))
+            child: const Text("Change fish number"))
       ],
     );
   }

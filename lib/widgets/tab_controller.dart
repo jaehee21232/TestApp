@@ -14,8 +14,8 @@ class _MyTabControllerState extends State<MyTabController> {
       length: 3,
       child: Scaffold(
         appBar: AppBar(
-          title: Text("Tabcontroller"),
-          bottom: TabBar(tabs: [
+          title: const Text("Tabcontroller"),
+          bottom: const TabBar(tabs: [
             Tab(
               icon: Icon(Icons.add_a_photo),
               text: "Text",

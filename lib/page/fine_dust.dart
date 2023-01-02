@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:testapp/model/AirResult.dart';
+import 'package:testapp/model/air_result.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
@@ -12,17 +12,17 @@ class FineDustApp extends StatefulWidget {
 
 class _FineDustAppState extends State<FineDustApp> {
   AirResult? _result;
-  final fine_dust_api = Uri.parse(
+  final finedustapi = Uri.parse(
       'http://api.airvisual.com/v2/nearest_city?key=5879121b-01fb-4e40-80ce-9997f43707ed');
 
   Future<AirResult> fetchData() async {
-    var response = await http.get(fine_dust_api);
+    var response = await http.get(finedustapi);
 
     AirResult result = AirResult.fromJson(json.decode(response.body));
     return result;
   }
 
-  Color GetColor(AirResult value) {
+  Color getcolor(AirResult value) {
     int? aquis = value.data?.current?.pollution?.aqius;
     if (aquis! <= 50) {
       return Colors.greenAccent;
@@ -46,27 +46,27 @@ class _FineDustAppState extends State<FineDustApp> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: _result == null
-          ? CircularProgressIndicator()
+          ? const CircularProgressIndicator()
           : Center(
               child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text("현재 위치 미세먼지 농도"),
+                const Text("현재 위치 미세먼지 농도"),
                 Card(
                   child: Column(children: [
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Container(
-                        color: GetColor(_result!),
+                        color: getcolor(_result!),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
-                            Text("얼굴사진"),
+                            const Text("얼굴사진"),
                             Text(
                               "${_result!.data?.current?.pollution?.aqius}",
-                              style: TextStyle(fontSize: 40),
+                              style: const TextStyle(fontSize: 40),
                             ),
-                            Text(
+                            const Text(
                               "보통",
                               style: TextStyle(fontSize: 20),
                             ),
@@ -97,7 +97,7 @@ class _FineDustAppState extends State<FineDustApp> {
                       child: ElevatedButton(
                           style: ButtonStyle(
                             padding: MaterialStateProperty.all(
-                                EdgeInsets.symmetric(
+                                const EdgeInsets.symmetric(
                                     vertical: 15.0, horizontal: 50.0)),
                           ),
                           onPressed: () {},

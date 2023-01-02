@@ -20,7 +20,7 @@ class _MyAnimatedOpacityState extends State<MyAnimatedOpacity> {
       body: Center(
         child: AnimatedOpacity(
           opacity: _visible ? 1.0 : 0.0,
-          duration: Duration(seconds: 1),
+          duration: const Duration(seconds: 1),
           child: Container(
             width: 200,
             height: 200,
@@ -34,7 +34,7 @@ class _MyAnimatedOpacityState extends State<MyAnimatedOpacity> {
             _visible = !_visible;
           });
         },
-        child: Icon(Icons.play_arrow),
+        child: const Icon(Icons.play_arrow),
       ),
     );
   }

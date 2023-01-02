@@ -6,7 +6,7 @@ class FishModel with ChangeNotifier {
   final String size;
 
   FishModel({required this.name, required this.number, required this.size});
-  void ChangeNotifier() {
+  void changenotifier() {
     number++;
     notifyListeners();
   }

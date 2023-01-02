@@ -12,18 +12,18 @@ class _MySnackBarState extends State<MySnackBar> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("SnackBar"),
+        title: const Text("SnackBar"),
       ),
       body: Center(
           child: ElevatedButton(
         onPressed: () {
-          final snackBar = SnackBar(
+          const snackBar = SnackBar(
             content: Text("This is SnackBar!"),
           );
 
           ScaffoldMessenger.of(context).showSnackBar(snackBar);
         },
-        child: Text("Show SnackBar"),
+        child: const Text("Show SnackBar"),
       )),
     );
   }

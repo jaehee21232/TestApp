@@ -5,8 +5,9 @@ class SeaFishModel with ChangeNotifier {
   int tunanumber;
   final String size;
 
-  SeaFishModel({required this.name, required this.tunanumber, required this.size});
-  void ChangeNotifier() {
+  SeaFishModel(
+      {required this.name, required this.tunanumber, required this.size});
+  void changenotifier() {
     tunanumber++;
     notifyListeners();
   }

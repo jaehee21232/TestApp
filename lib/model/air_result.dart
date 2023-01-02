@@ -80,19 +80,19 @@ class Current {
 
   Current.fromJson(Map<String, dynamic> json) {
     pollution = json['pollution'] != null
-        ? new Pollution.fromJson(json['pollution'])
+        ? Pollution.fromJson(json['pollution'])
         : null;
     weather =
-        json['weather'] != null ? new Weather.fromJson(json['weather']) : null;
+        json['weather'] != null ? Weather.fromJson(json['weather']) : null;
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    if (this.pollution != null) {
-      data['pollution'] = this.pollution!.toJson();
+    final Map<String, dynamic> data = <String, dynamic>{};
+    if (pollution != null) {
+      data['pollution'] = pollution!.toJson();
     }
-    if (this.weather != null) {
-      data['weather'] = this.weather!.toJson();
+    if (weather != null) {
+      data['weather'] = weather!.toJson();
     }
     return data;
   }
@@ -116,12 +116,12 @@ class Pollution {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['ts'] = this.ts;
-    data['aqius'] = this.aqius;
-    data['mainus'] = this.mainus;
-    data['aqicn'] = this.aqicn;
-    data['maincn'] = this.maincn;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['ts'] = ts;
+    data['aqius'] = aqius;
+    data['mainus'] = mainus;
+    data['aqicn'] = aqicn;
+    data['maincn'] = maincn;
     return data;
   }
 }

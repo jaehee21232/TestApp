@@ -19,7 +19,7 @@ class _MyAnimatedContainerState extends State<MyAnimatedContainer> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("AnimatedContainer"),
+        title: const Text("AnimatedContainer"),
       ),
       body: Center(
         child: AnimatedContainer(
@@ -27,7 +27,7 @@ class _MyAnimatedContainerState extends State<MyAnimatedContainer> {
             color: _color,
             borderRadius: BorderRadius.circular(_border),
           ),
-          duration: Duration(seconds: 1),
+          duration: const Duration(seconds: 1),
           curve: Curves.fastLinearToSlowEaseIn,
           width: _width,
           height: _height,
@@ -44,7 +44,7 @@ class _MyAnimatedContainerState extends State<MyAnimatedContainer> {
             _border = random.nextInt(30).toDouble();
           });
         },
-        child: Icon(Icons.play_arrow),
+        child: const Icon(Icons.play_arrow),
       ),
     );
   }

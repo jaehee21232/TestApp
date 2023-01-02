@@ -46,7 +46,7 @@ class _LoginSinUpScreenState extends State<LoginSinUpScreen> {
                         image: AssetImage("images/chatapp/red.jpg"),
                         fit: BoxFit.fill)),
                 child: Container(
-                  padding: EdgeInsets.only(top: 90, left: 20),
+                  padding: const EdgeInsets.only(top: 90, left: 20),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -77,8 +77,8 @@ class _LoginSinUpScreenState extends State<LoginSinUpScreen> {
                         isSingupScreen
                             ? "Singup to continue"
                             : "Signin to continue",
-                        style:
-                            TextStyle(color: Colors.white, letterSpacing: 1.0),
+                        style: const TextStyle(
+                            color: Colors.white, letterSpacing: 1.0),
                       )
                     ],
                   ),
@@ -87,16 +87,16 @@ class _LoginSinUpScreenState extends State<LoginSinUpScreen> {
             ),
             //배경
             AnimatedPositioned(
-              duration: Duration(milliseconds: 400),
+              duration: const Duration(milliseconds: 400),
               curve: Curves.easeIn,
               top: 180,
               child: AnimatedContainer(
-                duration: Duration(milliseconds: 400),
+                duration: const Duration(milliseconds: 400),
                 curve: Curves.easeIn,
-                padding: EdgeInsets.all(20),
+                padding: const EdgeInsets.all(20),
                 height: isSingupScreen ? 280 : 250,
                 width: size.width - 40,
-                margin: EdgeInsets.symmetric(horizontal: 20),
+                margin: const EdgeInsets.symmetric(horizontal: 20),
                 decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(15),
@@ -107,7 +107,7 @@ class _LoginSinUpScreenState extends State<LoginSinUpScreen> {
                           spreadRadius: 5)
                     ]),
                 child: SingleChildScrollView(
-                  padding: EdgeInsets.only(bottom: 20),
+                  padding: const EdgeInsets.only(bottom: 20),
                   child: Column(children: [
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -130,7 +130,7 @@ class _LoginSinUpScreenState extends State<LoginSinUpScreen> {
                                   )),
                               if (!isSingupScreen)
                                 Container(
-                                  margin: EdgeInsets.only(top: 3),
+                                  margin: const EdgeInsets.only(top: 3),
                                   height: 2,
                                   width: 55,
                                   color: Colors.orange,
@@ -157,7 +157,7 @@ class _LoginSinUpScreenState extends State<LoginSinUpScreen> {
                               ),
                               if (isSingupScreen)
                                 Container(
-                                  margin: EdgeInsets.only(top: 3),
+                                  margin: const EdgeInsets.only(top: 3),
                                   height: 2,
                                   width: 55,
                                   color: Colors.orange,
@@ -176,7 +176,7 @@ class _LoginSinUpScreenState extends State<LoginSinUpScreen> {
                             children: [
                               TextFormField(
                                 keyboardType: TextInputType.emailAddress,
-                                key: ValueKey(1),
+                                key: const ValueKey(1),
                                 validator: (value) {
                                   if (value!.isEmpty || value.length < 4) {
                                     return "Please enter at least 4 charcters";
@@ -189,7 +189,7 @@ class _LoginSinUpScreenState extends State<LoginSinUpScreen> {
                                 onChanged: (value) {
                                   userName = value;
                                 },
-                                decoration: InputDecoration(
+                                decoration: const InputDecoration(
                                     prefixIcon: Icon(
                                       Icons.account_circle,
                                       color: Palette.iconColor,
@@ -215,12 +215,12 @@ class _LoginSinUpScreenState extends State<LoginSinUpScreen> {
                                     ),
                                     contentPadding: EdgeInsets.all(10)),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 8,
                               ),
                               TextFormField(
                                 keyboardType: TextInputType.emailAddress,
-                                key: ValueKey(2),
+                                key: const ValueKey(2),
                                 validator: (value) {
                                   if (value!.isEmpty || !value.contains("@")) {
                                     return "Please enter a valid email address.";
@@ -233,7 +233,7 @@ class _LoginSinUpScreenState extends State<LoginSinUpScreen> {
                                 onChanged: (value) {
                                   userEmail = value;
                                 },
-                                decoration: InputDecoration(
+                                decoration: const InputDecoration(
                                     prefixIcon: Icon(
                                       Icons.email,
                                       color: Palette.iconColor,
@@ -259,12 +259,12 @@ class _LoginSinUpScreenState extends State<LoginSinUpScreen> {
                                     ),
                                     contentPadding: EdgeInsets.all(10)),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 8,
                               ),
                               TextFormField(
                                 obscureText: true,
-                                key: ValueKey(3),
+                                key: const ValueKey(3),
                                 validator: ((value) {
                                   if (value!.isEmpty || value.length < 6) {
                                     return "Password must be at least 8 characters long ";
@@ -277,7 +277,7 @@ class _LoginSinUpScreenState extends State<LoginSinUpScreen> {
                                 onChanged: ((value) {
                                   userPassword = value;
                                 }),
-                                decoration: InputDecoration(
+                                decoration: const InputDecoration(
                                     prefixIcon: Icon(
                                       Icons.lock,
                                       color: Palette.iconColor,
@@ -309,14 +309,14 @@ class _LoginSinUpScreenState extends State<LoginSinUpScreen> {
                       ),
                     if (!isSingupScreen)
                       Container(
-                        margin: EdgeInsets.only(top: 30),
+                        margin: const EdgeInsets.only(top: 30),
                         child: Form(
                             key: _formKey,
                             child: Column(
                               children: [
                                 TextFormField(
                                   keyboardType: TextInputType.emailAddress,
-                                  key: ValueKey(4),
+                                  key: const ValueKey(4),
                                   validator: (value) {
                                     if (value!.isEmpty ||
                                         !value.contains("@")) {
@@ -330,7 +330,7 @@ class _LoginSinUpScreenState extends State<LoginSinUpScreen> {
                                   onChanged: (value) {
                                     userEmail = value;
                                   },
-                                  decoration: InputDecoration(
+                                  decoration: const InputDecoration(
                                       prefixIcon: Icon(
                                         Icons.email,
                                         color: Palette.iconColor,
@@ -356,12 +356,12 @@ class _LoginSinUpScreenState extends State<LoginSinUpScreen> {
                                       ),
                                       contentPadding: EdgeInsets.all(10)),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 8,
                                 ),
                                 TextFormField(
                                   obscureText: true,
-                                  key: ValueKey(5),
+                                  key: const ValueKey(5),
                                   validator: ((value) {
                                     if (value!.isEmpty || value.length < 6) {
                                       return "Password must be at least 8 characters long ";
@@ -374,7 +374,7 @@ class _LoginSinUpScreenState extends State<LoginSinUpScreen> {
                                   onChanged: ((value) {
                                     userPassword = value;
                                   }),
-                                  decoration: InputDecoration(
+                                  decoration: const InputDecoration(
                                       prefixIcon: Icon(
                                         Icons.lock,
                                         color: Palette.iconColor,
@@ -409,14 +409,14 @@ class _LoginSinUpScreenState extends State<LoginSinUpScreen> {
             ),
             //텍스트 폼 필드
             AnimatedPositioned(
-                duration: Duration(milliseconds: 400),
+                duration: const Duration(milliseconds: 400),
                 curve: Curves.easeIn,
                 top: isSingupScreen ? 420 : 390,
                 right: 0,
                 left: 0,
                 child: Center(
                   child: Container(
-                    padding: EdgeInsets.all(15),
+                    padding: const EdgeInsets.all(15),
                     height: 90,
                     width: 90,
                     decoration: BoxDecoration(
@@ -436,15 +436,14 @@ class _LoginSinUpScreenState extends State<LoginSinUpScreen> {
                                 context,
                                 MaterialPageRoute(
                                   builder: (context) {
-                                    return ChatScreen();
+                                    return const ChatScreen();
                                   },
                                 ),
                               );
                             }
                           } catch (e) {
-                            print(e);
                             ScaffoldMessenger.of(context).showSnackBar(
-                              SnackBar(
+                              const SnackBar(
                                 content: Text(
                                     "Please check your email and password"),
                                 backgroundColor: Colors.blue,
@@ -466,19 +465,20 @@ class _LoginSinUpScreenState extends State<LoginSinUpScreen> {
                                 context,
                                 MaterialPageRoute(
                                   builder: (context) {
-                                    return ChatScreen();
+                                    return const ChatScreen();
                                   },
                                 ),
                               );
                             }
                           } catch (e) {
+                            // ignore: avoid_print
                             print(e);
                           }
                         }
                       },
                       child: Container(
                         decoration: BoxDecoration(
-                            gradient: LinearGradient(
+                            gradient: const LinearGradient(
                                 colors: [Colors.orange, Colors.red],
                                 begin: Alignment.topLeft,
                                 end: Alignment.bottomRight),
@@ -488,10 +488,10 @@ class _LoginSinUpScreenState extends State<LoginSinUpScreen> {
                                 color: Colors.black.withOpacity(0.3),
                                 spreadRadius: 1,
                                 blurRadius: 1,
-                                offset: Offset(0, 1),
+                                offset: const Offset(0, 1),
                               ),
                             ]),
-                        child: Icon(
+                        child: const Icon(
                           Icons.arrow_forward,
                           color: Colors.white,
                         ),
@@ -501,7 +501,7 @@ class _LoginSinUpScreenState extends State<LoginSinUpScreen> {
                 )),
             //전송버튼
             AnimatedPositioned(
-              duration: Duration(milliseconds: 500),
+              duration: const Duration(milliseconds: 500),
               curve: Curves.easeIn,
               top: isSingupScreen ? size.height - 125 : size.height - 165,
               right: 0,
@@ -513,11 +513,11 @@ class _LoginSinUpScreenState extends State<LoginSinUpScreen> {
                 ),
                 TextButton.icon(
                   onPressed: () {},
-                  icon: Icon(Icons.add),
-                  label: Text("Google"),
+                  icon: const Icon(Icons.add),
+                  label: const Text("Google"),
                   style: TextButton.styleFrom(
-                      primary: Colors.white,
-                      minimumSize: Size(155, 40),
+                      foregroundColor: Colors.white,
+                      minimumSize: const Size(155, 40),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20),
                       ),

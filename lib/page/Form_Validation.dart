@@ -15,7 +15,6 @@ class _FormValidationState extends State<FormValidation> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     nameFocusNode = FocusNode();
   }
@@ -63,6 +62,7 @@ class _FormValidationState extends State<FormValidation> {
                 TextField(
                   controller: nameController,
                   onChanged: (value) {
+                    // ignore: avoid_print
                     print(value);
                   },
                   focusNode: nameFocusNode,
@@ -76,7 +76,7 @@ class _FormValidationState extends State<FormValidation> {
                   onPressed: (() {
                     FocusScope.of(context).requestFocus(nameFocusNode);
                   }),
-                  child: Text("포커스"),
+                  child: const Text("포커스"),
                 ),
                 ElevatedButton(
                   onPressed: (() {
@@ -89,7 +89,7 @@ class _FormValidationState extends State<FormValidation> {
                       },
                     );
                   }),
-                  child: Text("TextField 값 확인"),
+                  child: const Text("TextField 값 확인"),
                 )
               ],
             )),

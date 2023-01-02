@@ -1,4 +1,3 @@
-import 'dart:developer';
 import 'package:flutter/material.dart';
 
 class StreamExam extends StatelessWidget {
@@ -6,7 +5,7 @@ class StreamExam extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Counter();
+    return const Counter();
   }
 }
 
@@ -24,7 +23,7 @@ class _CounterState extends State<Counter> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Stream builder"),
+        title: const Text("Stream builder"),
       ),
       body: StreamBuilder<int>(
         initialData: price,
@@ -34,7 +33,7 @@ class _CounterState extends State<Counter> {
           return Center(
             child: Text(
               pricenumber,
-              style: TextStyle(
+              style: const TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 40,
                   color: Colors.blue),
@@ -47,7 +46,7 @@ class _CounterState extends State<Counter> {
 
   Stream<int> addStreamValue() {
     return Stream<int>.periodic(
-      Duration(seconds: 1),
+      const Duration(seconds: 1),
       (count) => price + count,
     );
   }

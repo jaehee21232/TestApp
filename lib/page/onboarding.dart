@@ -39,8 +39,8 @@ class OnBoardingPage extends StatelessWidget {
       skip: const Text("Skip"), //스킵버튼 문구 지정
       dotsDecorator: DotsDecorator(
         color: Colors.cyan,
-        size: Size(10, 10), //점 사이즈
-        activeSize: Size(22, 10), //현재 활성화된 점 사이즈
+        size: const Size(10, 10), //점 사이즈
+        activeSize: const Size(22, 10), //현재 활성화된 점 사이즈
         activeShape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(24),
         ),

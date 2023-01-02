@@ -12,7 +12,7 @@ class _MyOrientationBuilderState extends State<MyOrientationBuilder> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("OrientationBuilder"),
+        title: const Text("OrientationBuilder"),
         centerTitle: true,
       ),
       body: OrientationBuilder(
