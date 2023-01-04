@@ -11,7 +11,7 @@ class WebViewPage extends StatefulWidget {
 class _WebViewState extends State<WebViewPage> {
   @override
   Widget build(BuildContext context) {
-    var contoller = WebViewController()
+    WebViewController contoller = WebViewController()
       ..setJavaScriptMode(JavaScriptMode.unrestricted)
       ..setBackgroundColor(const Color(0x00000000))
       ..setNavigationDelegate(NavigationDelegate(
@@ -32,11 +32,25 @@ class _WebViewState extends State<WebViewPage> {
         },
       ))
       ..loadRequest(Uri.parse("https://velog.io/@jaehee21232"));
-
+    Uri velogurl = Uri(
+      scheme: "https",
+      host: "velog.io",
+      path: "/@jaehee21232",
+    );
     return Scaffold(
         appBar: AppBar(
           title: Text('재희 Velog 웹뷰 연결'),
           centerTitle: true,
+          actions: [
+            IconButton(
+                onPressed: (() {
+                  if (contoller == null) {
+                    return;
+                  }
+                  contoller.loadRequest(velogurl);
+                }),
+                icon: Icon(Icons.home))
+          ],
         ),
         body: SafeArea(
           child: WebViewWidget(
