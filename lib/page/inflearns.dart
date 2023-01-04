@@ -1,16 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:testapp/page/fine_dust.dart';
+import 'package:testapp/inflearns/fine_dust.dart';
+import 'package:testapp/inflearns/picture_frame.dart';
 
 class Inflearns extends StatelessWidget {
   const Inflearns({super.key});
 
   @override
   Widget build(BuildContext context) {
-    List<Widget> pages = [
-      const FineDustApp(),
+    const List<Widget> pages = [
+      FineDustApp(),
+      PictureFrame(),
     ];
     List<String> name = [
       "미세먼지 앱",
+      "전자 액자",
     ];
     var size = MediaQuery.of(context).size;
     var width = size.width;
