@@ -31,7 +31,7 @@ class _WebViewState extends State<WebViewPage> {
           return NavigationDecision.navigate;
         },
       ))
-      ..loadRequest(Uri.parse("https://velog.io/@jaehee21232"));
+      ..loadRequest(Uri.parse("https://www.youtube.com/watch?v=ckjzPSl09jk"));
     Uri velogurl = Uri(
       scheme: "https",
       host: "velog.io",
@@ -52,10 +52,8 @@ class _WebViewState extends State<WebViewPage> {
                 icon: Icon(Icons.home))
           ],
         ),
-        body: SafeArea(
-          child: WebViewWidget(
-            controller: contoller,
-          ),
+        body: WebViewWidget(
+          controller: contoller,
         ));
   }
 }
