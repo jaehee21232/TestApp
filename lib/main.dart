@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:testapp/Home.dart';
 import 'package:provider/provider.dart';
 import 'package:testapp/model/fish_model.dart';
@@ -29,6 +30,13 @@ class MyApp extends StatelessWidget {
         )
       ],
       child: MaterialApp(
+        localizationsDelegates: const [
+          GlobalMaterialLocalizations.delegate,
+          GlobalCupertinoLocalizations.delegate,
+        ],
+        supportedLocales: const [
+          Locale('ko', ''),
+        ],
         debugShowCheckedModeBanner: false,
         title: '연습',
         theme: ThemeData(

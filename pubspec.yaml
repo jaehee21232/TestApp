@@ -31,6 +31,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_localizations:
+    sdk: flutter
   introduction_screen: ^3.0.2
   like_button: ^2.0.5
   provider: ^6.0.4
