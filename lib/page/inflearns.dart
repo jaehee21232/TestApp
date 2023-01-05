@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:testapp/inflearns/fine_dust.dart';
 import 'package:testapp/inflearns/old_day.dart';
 import 'package:testapp/inflearns/picture_frame.dart';
+import 'package:testapp/inflearns/rand_number.dart';
 
 class Inflearns extends StatelessWidget {
   const Inflearns({super.key});
@@ -12,11 +13,13 @@ class Inflearns extends StatelessWidget {
       FineDustApp(),
       PictureFrame(),
       OldDay(),
+      RandomNumber(),
     ];
     List<String> name = [
       "미세먼지 앱",
       "전자 액자",
       "날짜 계산기",
+      "난수 생성기",
     ];
     var size = MediaQuery.of(context).size;
     var width = size.width;
