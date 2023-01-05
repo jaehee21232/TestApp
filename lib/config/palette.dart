@@ -9,3 +9,9 @@ class Palette {
   static const Color googleColor = Color(0xFFDE4B39);
   static const Color backgroundColor = Color(0xFFECF3F9);
 }
+
+class RandomNumberColors {
+  static const Color primarycolor = Color(0xFF2d2D33);
+  static const Color red = Color(0xFFEA4955);
+  static const Color blue = Color(0xFF549FBF);
+}
