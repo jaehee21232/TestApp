@@ -48,7 +48,7 @@ class _PictureFrameState extends State<PictureFrame> {
       controller: controller,
       children: [1, 2, 3, 4, 5]
           .map((e) => Image.asset(
-                "images/inflearns/image_${e}.jpeg",
+                "assets/images/inflearns/image_${e}.jpeg",
                 fit: BoxFit.cover,
               ))
           .toList(),

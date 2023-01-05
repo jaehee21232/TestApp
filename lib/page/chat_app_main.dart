@@ -43,7 +43,7 @@ class _LoginSinUpScreenState extends State<LoginSinUpScreen> {
                 height: 300,
                 decoration: const BoxDecoration(
                     image: DecorationImage(
-                        image: AssetImage("images/chatapp/red.jpg"),
+                        image: AssetImage("assets/images/chatapp/red.jpg"),
                         fit: BoxFit.fill)),
                 child: Container(
                   padding: const EdgeInsets.only(top: 90, left: 20),

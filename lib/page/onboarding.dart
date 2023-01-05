@@ -13,19 +13,19 @@ class OnBoardingPage extends StatelessWidget {
         PageViewModel(
           title: "Title!",
           body: "This is body!\n" "first page!!",
-          image: Image.asset('images/onboarding/page1.png'),
+          image: Image.asset('assets/images/onboarding/page1.png'),
           decoration: getPageDecoration(),
         ),
         PageViewModel(
           title: "Title!",
           body: "This is body!\n" "second page!!",
-          image: Image.asset('images/onboarding/page2.png'),
+          image: Image.asset('assets/images/onboarding/page2.png'),
           decoration: getPageDecoration(),
         ),
         PageViewModel(
           title: "Title!",
           body: "This is body!\n" "third page!!",
-          image: Image.asset('images/onboarding/page3.png'),
+          image: Image.asset('assets/images/onboarding/page3.png'),
           decoration: getPageDecoration(),
         ),
       ],

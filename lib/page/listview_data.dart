@@ -23,14 +23,14 @@ class _ListViewDataMoveState extends State<ListViewDataMove> {
   ];
 
   static List<String> animalImagePath = [
-    'images/listview2/bear.png',
-    'images/listview2/camel.png',
-    'images/listview2/deer.png',
-    'images/listview2/fox.png',
-    'images/listview2/kangaroo.png',
-    'images/listview2/koala.png',
-    'images/listview2/lion.png',
-    'images/listview2/tiger.png'
+    'assets/images/listview2/bear.png',
+    'assets/images/listview2/camel.png',
+    'assets/images/listview2/deer.png',
+    'assets/images/listview2/fox.png',
+    'assets/images/listview2/kangaroo.png',
+    'assets/images/listview2/koala.png',
+    'assets/images/listview2/lion.png',
+    'assets/images/listview2/tiger.png'
   ];
 
   static List<String> animalLocation = [

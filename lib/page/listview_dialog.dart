@@ -21,16 +21,16 @@ class _ListViewPageState extends State<ListViewPage> {
     "Medical Secretary"
   ];
   var imageList = [
-    "images/listview/1.png",
-    "images/listview/2.png",
-    "images/listview/3.png",
-    "images/listview/4.png",
-    "images/listview/5.png",
-    "images/listview/6.png",
-    "images/listview/7.png",
-    "images/listview/8.png",
-    "images/listview/9.png",
-    "images/listview/10.png",
+    "assets/images/listview/1.png",
+    "assets/images/listview/2.png",
+    "assets/images/listview/3.png",
+    "assets/images/listview/4.png",
+    "assets/images/listview/5.png",
+    "assets/images/listview/6.png",
+    "assets/images/listview/7.png",
+    "assets/images/listview/8.png",
+    "assets/images/listview/9.png",
+    "assets/images/listview/10.png",
   ];
 
   var description = [
