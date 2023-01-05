@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:testapp/inflearns/fine_dust.dart';
+import 'package:testapp/inflearns/old_day.dart';
 import 'package:testapp/inflearns/picture_frame.dart';
 
 class Inflearns extends StatelessWidget {
@@ -10,10 +11,12 @@ class Inflearns extends StatelessWidget {
     const List<Widget> pages = [
       FineDustApp(),
       PictureFrame(),
+      OldDay(),
     ];
     List<String> name = [
       "미세먼지 앱",
       "전자 액자",
+      "날짜 계산기",
     ];
     var size = MediaQuery.of(context).size;
     var width = size.width;
