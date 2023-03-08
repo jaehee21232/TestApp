@@ -31,12 +31,10 @@ class _WebViewState extends State<WebViewPage> {
           return NavigationDecision.navigate;
         },
       ))
-      ..loadRequest(Uri.parse("https://www.youtube.com/watch?v=ckjzPSl09jk"));
-    Uri velogurl = Uri(
-      scheme: "https",
-      host: "velog.io",
-      path: "/@jaehee21232",
-    );
+      ..loadRequest(Uri.parse(
+          "https://pf.kakao.com/_jFsFxj/friend?app_key=245a8022cd30a514b0843483c584d9f6&kakao_agent=sdk%2F1.3.1+sdk_type%2Fflutter+os%2Fandroid-33+lang%2Fko-KR+origin%2FDDsEBRV1Dsa%2FvAneS44Jv0%2FFRY0%3D+device%2FSM-S901N+android_pkg%2Fcom.CODEDC.CODEDCAPP+app_ver%2F1.0.0&api_ver=1.0"));
+    Uri velogurl = Uri.parse(
+        "https://pf.kakao.com/_jFsFxj/friend?app_key=245a8022cd30a514b0843483c584d9f6&kakao_agent=sdk%2F1.3.1+sdk_type%2Fflutter+os%2Fandroid-33+lang%2Fko-KR+origin%2FDDsEBRV1Dsa%2FvAneS44Jv0%2FFRY0%3D+device%2FSM-S901N+android_pkg%2Fcom.CODEDC.CODEDCAPP+app_ver%2F1.0.0&api_ver=1.0");
     return Scaffold(
         appBar: AppBar(
           title: Text('재희 Velog 웹뷰 연결'),

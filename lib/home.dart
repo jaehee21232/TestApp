@@ -10,6 +10,7 @@ import 'package:testapp/page/onboarding.dart';
 import 'package:testapp/page/provider_test.dart';
 import 'package:testapp/page/stream_exam.dart';
 import 'package:testapp/page/flu_widgets.dart';
+import 'package:testapp/page/textanimaion.dart';
 import 'package:testapp/page/web_view.dart';
 
 class HomeBuilder extends StatelessWidget {
@@ -26,6 +27,7 @@ class HomeBuilder extends StatelessWidget {
     SwipeToDismiss(),
     SplashScreen(),
     WebViewPage(),
+    TextAni(),
   ];
   final List<String> texts = const <String>[
     "Widgets",
@@ -39,7 +41,8 @@ class HomeBuilder extends StatelessWidget {
     "FormValidation",
     "Dissmissible",
     "Loding Page",
-    "WebView"
+    "WebView",
+    "텍스트애니메이션"
   ];
 
   HomeBuilder({super.key});
