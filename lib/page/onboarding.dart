@@ -11,8 +11,8 @@ class OnBoardingPage extends StatelessWidget {
       pages: [
         //PageViewModel로 해도 되고 Widget 만들어서 해도 될듯?
         PageViewModel(
-          title: "Title!",
-          body: "This is body!\n" "first page!!",
+          title: "개발자를 꿈꾸고 계신가요?",
+          body: "코드디씨는 교내 개발동아리로 재학생이라면\n 누구나 지원할 수 있습니다.",
           image: Image.asset('assets/images/onboarding/page1.png'),
           decoration: getPageDecoration(),
         ),
@@ -34,9 +34,13 @@ class OnBoardingPage extends StatelessWidget {
         Navigator.of(context).pushReplacement(
             MaterialPageRoute(builder: ((context) => const MyApp())));
       }, //done을 누르면 실행되는거(마지막 페이지에서 나옴)
-      next: const Icon(Icons.arrow_forward), //Next 버튼 아이콘으로 됨
-      showSkipButton: true, //스킵버튼 True로 활성화
-      skip: const Text("Skip"), //스킵버튼 문구 지정
+      globalBackgroundColor: Color.fromRGBO(30, 35, 44, 1),
+      next: const Text("다음"), //Next 버튼 아이콘으로 됨
+      showSkipButton: false,
+      showBackButton: true,
+      back: const Text("이전"), //스킵버튼 문구 지정
+      dotsContainerDecorator: BoxDecoration(
+          border: Border(top: BorderSide(color: Colors.white, width: 0.8))),
       dotsDecorator: DotsDecorator(
         color: Colors.cyan,
         size: const Size(10, 10), //점 사이즈
@@ -52,10 +56,11 @@ class OnBoardingPage extends StatelessWidget {
 
   PageDecoration getPageDecoration() {
     return const PageDecoration(
-      titleTextStyle: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
-      bodyTextStyle: TextStyle(fontSize: 18, color: Colors.blue),
+      titleTextStyle: TextStyle(
+          fontSize: 28, fontWeight: FontWeight.bold, color: Colors.white),
+      bodyTextStyle: TextStyle(fontSize: 18, color: Colors.white),
       imagePadding: EdgeInsets.only(top: 40),
-      pageColor: Colors.orange,
+      pageColor: Color.fromRGBO(30, 35, 44, 1),
     );
   }
 }

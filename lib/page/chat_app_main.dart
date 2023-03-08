@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:testapp/config/palette.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:testapp/page/chat_screen.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 
 class LoginSinUpScreen extends StatefulWidget {
   const LoginSinUpScreen({Key? key}) : super(key: key);
@@ -24,10 +25,21 @@ class _LoginSinUpScreenState extends State<LoginSinUpScreen> {
     }
   }
 
+  void signInWithGoogle() async {
+    final GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
+
+    if (googleUser != null) {
+      print('name = ${googleUser.displayName}');
+      print('email = ${googleUser.email}');
+      print('id = ${googleUser.id}');
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: Palette.backgroundColor,
       body: GestureDetector(
         onTap: () {
@@ -512,7 +524,9 @@ class _LoginSinUpScreenState extends State<LoginSinUpScreen> {
                   height: 10,
                 ),
                 TextButton.icon(
-                  onPressed: () {},
+                  onPressed: () async {
+                    signInWithGoogle();
+                  },
                   icon: const Icon(Icons.add),
                   label: const Text("Google"),
                   style: TextButton.styleFrom(
