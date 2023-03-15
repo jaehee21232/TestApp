@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:testapp/Home.dart';
 import 'package:provider/provider.dart';
+import 'package:testapp/model/counter_bloc.dart';
 import 'package:testapp/model/fish_model.dart';
 import 'package:testapp/model/seafish_model.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -18,17 +20,8 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MultiProvider(
-      providers: [
-        ChangeNotifierProvider(
-          create: (context) =>
-              FishModel(name: 'salmon', number: 10, size: 'big'),
-        ),
-        ChangeNotifierProvider(
-          create: (context) =>
-              SeaFishModel(name: 'salmon', tunanumber: 10, size: 'middle'),
-        )
-      ],
+    return BlocProvider(
+      create: (context) => CounterCubit(),
       child: MaterialApp(
         localizationsDelegates: const [
           GlobalMaterialLocalizations.delegate,
