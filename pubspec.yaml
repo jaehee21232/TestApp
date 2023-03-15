@@ -46,6 +46,8 @@ dependencies:
   webview_flutter: ^4.0.1
   google_sign_in: ^5.4.2
   animated_text_kit: ^4.2.2
+  particles_flutter: ^0.1.4
+  flutter_bloc: ^8.1.2
 
 dev_dependencies:
   flutter_test:
